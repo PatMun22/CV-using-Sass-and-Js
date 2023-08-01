@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, rgba(108, 122, 137, 0.8), rgb(210, 215, 211));
+}
+
+main {
+  width: 70%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}

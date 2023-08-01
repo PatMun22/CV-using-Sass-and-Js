@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+$body-color1: rgba(108, 122, 137, 0.8);
+$body-color2: rgb(210, 215, 211);
+$main-color: rgb(255,255,255);
+$sub-sectionbg-color: rgb(0,0,0,0.2);
+$text-color: rgb(0,0,0,0.5);
+
+body {
+    background: linear-gradient(to right, $body-color1, $body-color2);
+}
+main {
+    width: 70%;
+    height: 100%;
+    background-color: $main-color;
+}
