@@ -49,11 +49,12 @@ body > main {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 100%;
 }
 #section-one > .profName {
   display: flex;
   align-items: flex-start;
-  justify-content: left;
+  justify-content: center;
   flex-direction: column;
   padding-left: 1.5rem;
   padding-top: 5rem;
@@ -66,6 +67,7 @@ body > main {
 #section-one > .profName > p {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
 }
 #section-one > .contact {
   display: grid;
@@ -76,12 +78,27 @@ body > main {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   padding-bottom: 2rem;
 }
 #section-one > .contact > .contactIcons > i {
+  color: rgb(255, 255, 255);
   display: block;
   margin: 0 auto;
-  color: rgb(255, 255, 255);
+}
+#section-one > .contact > .contactdetails {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+#section-one > .contact > .contactdetails > p {
+  line-height: 1rem;
+  margin-left: 1rem;
+}
+#section-one > .contact > .contactIcons, #section-one > .contact .contactdetails {
+  padding-top: 10rem;
 }
