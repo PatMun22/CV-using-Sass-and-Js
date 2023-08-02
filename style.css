@@ -15,4 +15,73 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+body > main {
+  width: 70%;
+  min-height: 400px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+  justify-content: space-between;
+  box-shadow: 3rem 3rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+#section-one {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px soid rgb(210, 215, 211);
+}
+#section-one > .profPic {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+}
+#section-one > .profPic > img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#section-one > .profName {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  padding-top: 5rem;
+}
+#section-one > .profName > h1 {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.1rem;
+}
+#section-one > .profName > p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+#section-one > .contact {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+}
+#section-one > .contact > .contactIcons {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+#section-one > .contact > .contactIcons > i {
+  display: block;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
 }

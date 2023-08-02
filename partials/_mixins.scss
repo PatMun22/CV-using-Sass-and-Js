@@ -40,3 +40,12 @@
         }
     }
 }
+
+@mixin section1_lastSub() {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+}
