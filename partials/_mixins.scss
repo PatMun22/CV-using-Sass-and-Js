@@ -1,0 +1,42 @@
+
+@mixin timeline($textColor: $main-color, $background: $text-color) {
+    background: $background;
+    color: $textColor;
+    padding: 1rem;
+    margin-top: .1rem;
+}
+
+@mixin experience($textColor: $text-color) {
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+        column-gap: 1.3rem;
+        justify-content: space-between;
+        width: 100%;
+
+        & > h2 {
+            color: $textColor;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: left;
+        }
+    
+        & > p {
+            color: $textColor;
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-align: left;
+        }
+    
+        & > ul {
+            display: flex;
+            flex-direction: column;
+            margin-left: 3rem;
+    
+            & > li {
+                list-style: circle;
+            }
+        }
+    }
+}

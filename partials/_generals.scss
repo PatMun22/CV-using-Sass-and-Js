@@ -1,9 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 $body-color1: rgba(108, 122, 137, 0.8);
 $body-color2: rgb(210, 215, 211);
@@ -11,11 +6,20 @@ $main-color: rgb(255,255,255);
 $sub-sectionbg-color: rgb(0,0,0,0.2);
 $text-color: rgb(0,0,0,0.5);
 
-body {
-    background: linear-gradient(to right, $body-color1, $body-color2);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: $text-color;
 }
-main {
-    width: 70%;
-    height: 100%;
-    background-color: $main-color;
+
+body {
+    background: $body-color1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
