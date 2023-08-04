@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
 }
 body > main {
-  width: 70%;
+  width: 85%;
   min-height: 400px;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -28,11 +28,22 @@ body > main {
        column-gap: 2.5rem;
   justify-content: space-between;
   box-shadow: 3rem 3rem 1.5rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+@media screen and (max-width: 900px) {
+  body main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main {
+    width: 95%;
+  }
 }
 
 #section-one {
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr 1fr;
+  grid-template-columns: 0.8fr 1.5fr 1fr;
   gap: 0;
   width: 100%;
   padding: 0;
@@ -43,6 +54,10 @@ body > main {
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 #section-one > .profPic > img {
   width: 100%;
@@ -50,6 +65,10 @@ body > main {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 100%;
+  transition: 0.3s ease-in-out;
+}
+#section-one > .profPic > img > image:hover {
+  transform: scale(1.1);
 }
 #section-one > .profName {
   display: flex;
@@ -80,7 +99,7 @@ body > main {
   row-gap: 1.5rem;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-bottom: 2rem;
+  padding: 10rem 0 2rem;
 }
 #section-one > .contact > .contactIcons > i {
   color: rgb(255, 255, 255);
@@ -93,12 +112,106 @@ body > main {
   row-gap: 1.5rem;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-bottom: 2rem;
+  padding: 10rem 0 2rem;
 }
 #section-one > .contact > .contactdetails > p {
   line-height: 1rem;
   margin-left: 1rem;
+  cursor: pointer;
 }
 #section-one > .contact > .contactIcons, #section-one > .contact .contactdetails {
   padding-top: 10rem;
+}
+
+@media screen and (max-width: 900px) {
+  #section-one {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "profilePicture profileName" "contact contact";
+    row-gap: 0.5rem;
+  }
+  #section-one > .profPic {
+    grid-area: "profilePicture";
+  }
+  #section-one > .profName {
+    grid-area: "profileName";
+  }
+  #section-one > .contact {
+    grid-area: "contact";
+    grid-template-columns: 0.2fr 1fr;
+  }
+  #section-one > .contact > .contactIcons, #section-one > .contact .contactdetails {
+    padding-top: 2rem;
+  }
+}
+#section-two {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  min-height: 300px;
+  margin-top: 2rem;
+}
+#section-two > .title {
+  width: 100%;
+}
+#section-two > .title > h1 {
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 30px;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  transform: rotate(-90deg);
+  margin-top: 8rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+#section-two > .experience {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 2fr;
+}
+#section-two > .experience > .job-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 2.5rem;
+}
+#section-two > .experience > .job-container > .job-details > h2, #section-two > .experience > .job-container > .job-details p, #section-two > .experience > .job-container > .job-details span {
+  text-transform: capitalize;
+}
+#section-two > .experience > .job-container > .job-details > h2 {
+  font-size: 20px;
+}
+#section-two > .experience > .job-container > .job-details > p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+#section-two > .experience > .job-container > .job-details > span {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  padding: 0.1rem;
+  margin-top: 1rem;
+}
+#section-two > .experience > .vertLine {
+  height: inherit;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 2rem;
+  position: relative;
+}
+#section-two > .experience > .vertLine > .blackdot {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 100%;
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: -4px;
+}
+#section-two > .experience > .vertLine > .blackdot > .one {
+  top: -4px;
+}
+#section-two > .experience > .vertLine > .blackdot > .two {
+  top: 10px;
+}
+#section-two > .experience > .vertLine > .blackdot > .three {
+  top: 50px;
 }

@@ -1,0 +1,86 @@
+
+#section-two {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    min-height: 300px;
+    margin-top: 2rem;
+
+    & > .title {
+        width: 100%;
+
+        & > h1{
+            text-align: right;
+            padding-right: 1rem;
+            font-size: 30px;
+            letter-spacing: .5rem;
+            font-weight: 500;
+            transform: rotate(-90deg);
+            margin-top: 8rem;
+            color: $text-color;
+            text-transform: uppercase;
+        }
+    }
+
+    & > .experience {
+        display: grid;
+        grid-template-columns: 1fr .2fr 2fr;
+
+        & > .job-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 2.5rem;
+
+            & > .job-details {
+                & > h2, p, span {
+                    text-transform: capitalize;
+                }
+
+                & > h2 {
+                    font-size: 20px;
+                }
+
+                & > p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: .7rem;
+                }
+
+                & > span {
+                    @include timeline();
+                }
+            }
+        }
+        
+        & > .vertLine {
+            height: inherit;
+            width: 2px;
+            background-color: $text-color;
+            margin-left: 2rem;
+            position: relative;
+
+            & > .blackdot {
+                width: 8px;
+                height: 8px;
+                background-color: black;
+                border-radius: 100%;
+                outline: 1px solid $sub-sectionbg-color;
+                position: absolute;
+                left: -4px;
+
+                & > .one {
+                    top: -4px;
+                }
+
+                & > .two {
+                    top: 10px;
+                }
+
+                & > .three {
+                    top: 50px;
+                }
+            }
+        }
+
+    }
+}

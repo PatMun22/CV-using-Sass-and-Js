@@ -26,7 +26,7 @@ body {
     min-height: 100vh;
 
     & > main {
-        width: 70%;
+        width: 85%;
         min-height: 400px;
         background-color: $main-color;
         display: flex;
@@ -34,5 +34,17 @@ body {
         column-gap: 2.5rem;
         justify-content: space-between;
         box-shadow: 3rem 3rem 1.5rem $sub-sectionbg-color;
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: 900px) {
+        main {
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        main {
+            width: 95%;
+        }
     }
 }

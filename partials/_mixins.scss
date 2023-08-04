@@ -2,8 +2,8 @@
 @mixin timeline($textColor: $main-color, $background: $text-color) {
     background: $background;
     color: $textColor;
-    padding: 1rem;
-    margin-top: .1rem;
+    padding: .1rem;
+    margin-top: 1rem;
 }
 
 @mixin experience($textColor: $text-color) {
@@ -47,5 +47,5 @@
     row-gap: 1.5rem;
     align-items: flex-start;
     justify-content: flex-end;
-    padding-bottom: 2rem;
+    padding: 10rem 0 2rem;
 }
