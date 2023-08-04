@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: .5fr 2fr;
     min-height: 300px;
-    margin-top: 2rem;
+    margin: 2rem 0;
 
     & > .title {
         width: 100%;
@@ -26,10 +26,7 @@
         grid-template-columns: 1fr .2fr 2fr;
 
         & > .job-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            row-gap: 2.5rem;
+            @include experience_container();
 
             & > .job-details {
                 & > h2, p, span {
@@ -56,7 +53,7 @@
             height: inherit;
             width: 2px;
             background-color: $text-color;
-            margin-left: 2rem;
+            margin: 0 2rem 0;
             position: relative;
 
             & > .blackdot {
@@ -65,22 +62,13 @@
                 background-color: black;
                 border-radius: 100%;
                 outline: 1px solid $sub-sectionbg-color;
-                position: absolute;
-                left: -4px;
-
-                & > .one {
-                    top: -4px;
-                }
-
-                & > .two {
-                    top: 10px;
-                }
-
-                & > .three {
-                    top: 50px;
-                }
+                margin-bottom: 50px;
             }
         }
 
+        & > .experience-container {
+            @include experience_container();
+            @include experience();
+        }
     }
 }

@@ -147,7 +147,7 @@ body > main {
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   min-height: 300px;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 #section-two > .title {
   width: 100%;
@@ -171,7 +171,7 @@ body > main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  row-gap: 2.5rem;
+  row-gap: 1rem;
 }
 #section-two > .experience > .job-container > .job-details > h2, #section-two > .experience > .job-container > .job-details p, #section-two > .experience > .job-container > .job-details span {
   text-transform: capitalize;
@@ -194,7 +194,7 @@ body > main {
   height: inherit;
   width: 2px;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-left: 2rem;
+  margin: 0 2rem 0;
   position: relative;
 }
 #section-two > .experience > .vertLine > .blackdot {
@@ -203,15 +203,119 @@ body > main {
   background-color: black;
   border-radius: 100%;
   outline: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+#section-two > .experience > .experience-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1rem;
+}
+#section-two > .experience > .experience-container .inner-container {
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 1.3rem;
+       column-gap: 1.3rem;
+  justify-content: space-between;
+  width: 100%;
+}
+#section-two > .experience > .experience-container .inner-container > h2 {
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+#section-two > .experience > .experience-container .inner-container > p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: left;
+}
+#section-two > .experience > .experience-container .inner-container > ul {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+#section-two > .experience > .experience-container .inner-container > ul > li {
+  list-style: circle;
+}
+
+#section-three {
+  width: 100%;
+  padding: 2rem;
+  background-color: hsl(255, 95%, 95%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+#section-three > .sec3-inner > h2 {
+  margin-bottom: 0.5rem;
+  position: relative;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#section-three > .sec3-inner > h2::before {
+  content: "";
   position: absolute;
-  left: -4px;
+  bottom: 1px;
+  height: 2px;
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-#section-two > .experience > .vertLine > .blackdot > .one {
-  top: -4px;
+#section-three > .sec3-inner:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-#section-two > .experience > .vertLine > .blackdot > .two {
-  top: 10px;
+#section-three > .sec3-inner:nth-of-type(2) > .mini-div > h3, #section-three > .sec3-inner:nth-of-type(2) > .mini-div p, #section-three > .sec3-inner:nth-of-type(2) > .mini-div span {
+  text-transform: capitalize;
 }
-#section-two > .experience > .vertLine > .blackdot > .three {
-  top: 50px;
+#section-three > .sec3-inner:nth-of-type(2) > .mini-div > span {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  padding: 0.1rem;
+  margin-top: 1rem;
+}
+#section-three > .sec3-inner:nth-of-type(3),
+#section-three .sec3-inner:nth-of-type(2) {
+  padding-left: 1.2rem;
+  border-left: 1.5px solid rgba(0, 0, 0, 0.5);
+}
+#section-three > .sec3-inner:nth-of-type(3) > ul,
+#section-three .sec3-inner:nth-of-type(2) > ul {
+  margin-left: 2rem;
+}
+#section-three > .sec3-inner:nth-of-type(3) > ul > li,
+#section-three .sec3-inner:nth-of-type(2) > ul > li {
+  list-style: circle;
+  text-transform: capitalize;
+}
+
+#section-four {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50px;
+}
+#section-four > h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+#section-four > hr {
+  width: 100px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#section-four > p {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 18px;
+}
+#section-four > p:nth-of-type(2),
+#section-four p:nth-of-type(3),
+#section-four p:nth-of-type(4) {
+  padding-left: 1.2rem;
+  border-left: 1.5px solid rgba(0, 0, 0, 0.5);
 }

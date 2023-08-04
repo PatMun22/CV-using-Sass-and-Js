@@ -1,0 +1,57 @@
+
+#section-three {
+    width: 100%;
+    padding: 2rem;
+    background-color: hsl(255, 95%, 95%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+
+    & > .sec3-inner > h2 {
+        margin-bottom: .5rem;
+        position: relative;
+        font-size: 1.1rem;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    & > .sec3-inner > h2::before {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        height: 2px;
+        width: 20%;
+        background-color: $text-color;
+    }
+
+    & > .sec3-inner:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+
+        & > .mini-div{
+            & > h3, p, span {
+                text-transform: capitalize;
+            }
+
+            & > span {
+                @include timeline();
+            }
+        }
+    }
+
+    & > .sec3-inner:nth-of-type(3),
+        .sec3-inner:nth-of-type(2) {
+        @include left-border();
+
+        & > ul {
+            margin-left: 2rem;
+
+            & > li {
+                list-style:circle;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

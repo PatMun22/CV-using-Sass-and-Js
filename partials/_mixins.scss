@@ -6,8 +6,15 @@
     margin-top: 1rem;
 }
 
+@mixin experience_container() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1rem;
+}
+
 @mixin experience($textColor: $text-color) {
-    .experience-container {
+    .inner-container {
         display: flex;
         flex-direction: column;
         column-gap: 1.3rem;
@@ -17,7 +24,7 @@
         & > h2 {
             color: $textColor;
             text-transform: uppercase;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             font-weight: 600;
             text-align: left;
         }
@@ -48,4 +55,9 @@
     align-items: flex-start;
     justify-content: flex-end;
     padding: 10rem 0 2rem;
+}
+
+@mixin left-border() {
+    padding-left: 1.2rem;
+    border-left: 1.5px solid $text-color;
 }
