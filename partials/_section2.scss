@@ -1,7 +1,7 @@
 
 #section-two {
     display: grid;
-    grid-template-columns: .5fr 2fr;
+    grid-template-columns: .2fr 2fr;
     min-height: 300px;
     margin: 2rem 0;
 
@@ -10,7 +10,7 @@
 
         & > h1{
             text-align: right;
-            padding-right: 1rem;
+            margin-right: 1rem;
             font-size: 30px;
             letter-spacing: .5rem;
             font-weight: 500;
