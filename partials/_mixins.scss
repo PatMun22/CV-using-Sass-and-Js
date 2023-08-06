@@ -63,3 +63,8 @@
     padding-left: 1.2rem;
     border-left: 1.5px solid $text-color;
 }
+
+@mixin no-left-border() {
+    padding-left: 0;
+    border-left: none;
+}

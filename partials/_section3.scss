@@ -71,6 +71,10 @@
                 margin-bottom: 1rem;
             }
         }
+
+        & > .sec3-inner:nth-of-type(3) {
+            @include no-left-border();
+        }
     
     }
 }
@@ -78,5 +82,11 @@
 @media screen and (max-width: 568px) {
     #section-three {
         grid-template-columns: 1fr;
+        text-align: center;
+
+        & > .sec3-inner:nth-of-type(2),
+            .sec3-inner:nth-of-type(4) {
+                @include no-left-border();
+        }
     }
 }

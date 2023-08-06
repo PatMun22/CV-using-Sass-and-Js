@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     height: 50px;
 
     & > h3 {
@@ -11,7 +12,7 @@
     }
 
     & > hr {
-        width: 100px;
+        width: 10rem;
         height: 2px;
         background-color: $text-color;
     }
