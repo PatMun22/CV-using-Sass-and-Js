@@ -1,7 +1,7 @@
 
 #section-two {
     display: grid;
-    grid-template-columns: .2fr 2fr;
+    grid-template-columns: .1fr 2.5fr;
     min-height: 300px;
     margin: 2rem 0;
 
@@ -23,7 +23,8 @@
 
     & > .experience {
         display: grid;
-        grid-template-columns: 1fr .2fr 2fr;
+        grid-template-columns: 1fr 2fr;
+        column-gap: .5rem;
 
         & > .job-container {
             @include experience_container();
@@ -48,27 +49,44 @@
                 }
             }
         }
-        
-        & > .vertLine {
-            height: inherit;
-            width: 2px;
-            background-color: $text-color;
-            margin: 0 2rem 0;
-            position: relative;
-
-            & > .blackdot {
-                width: 8px;
-                height: 8px;
-                background-color: black;
-                border-radius: 100%;
-                outline: 1px solid $sub-sectionbg-color;
-                margin-bottom: 50px;
-            }
-        }
 
         & > .experience-container {
+            border-left: 2px solid $text-color;
+            padding-left: 1.5rem;
             @include experience_container();
             @include experience();
         }
     }
+}
+
+@media screen and (max-width: 1024px) {
+    #section-two {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        margin-top: -8rem;
+
+        & > .title {
+            width: 100%;
+    
+            & > h1{
+                text-align: center;
+                transform: rotate(0deg);
+                margin-bottom: 1rem;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #section-two {
+    
+        & > .experience {
+            display: grid;
+            grid-template-columns: .5fr 2fr;
+            column-gap: 0;
+        }
+    }
+    
+
 }

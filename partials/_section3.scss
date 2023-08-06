@@ -57,3 +57,26 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    #section-three {
+        grid-template-columns: repeat(2, 1fr);
+
+        & > .title {
+            width: 100%;
+    
+            & > h1{
+                text-align: center;
+                transform: rotate(0deg);
+                margin-bottom: 1rem;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 568px) {
+    #section-three {
+        grid-template-columns: 1fr;
+    }
+}

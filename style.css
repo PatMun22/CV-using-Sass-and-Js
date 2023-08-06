@@ -29,7 +29,7 @@ body > main {
   justify-content: space-between;
   box-shadow: 3rem 3rem 1.5rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  margin: 8rem 0;
+  margin: 2rem 0 6rem;
 }
 @media screen and (max-width: 900px) {
   body main {
@@ -91,7 +91,7 @@ body > main {
 }
 #section-one > .contact {
   display: grid;
-  grid-template-columns: 0.2fr 1fr;
+  grid-template-columns: 15% 85%;
 }
 #section-one > .contact > .contactIcons {
   background-color: rgba(0, 0, 0, 0.5);
@@ -122,11 +122,10 @@ body > main {
   font-size: 15px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 767px) {
   #section-one {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "profilePicture profileName" "contact contact";
-    row-gap: 0.5rem;
   }
   #section-one > .profPic {
     grid-area: "profilePicture";
@@ -144,7 +143,7 @@ body > main {
 }
 #section-two {
   display: grid;
-  grid-template-columns: 0.2fr 2fr;
+  grid-template-columns: 0.1fr 2.5fr;
   min-height: 300px;
   margin: 2rem 0;
 }
@@ -164,7 +163,9 @@ body > main {
 }
 #section-two > .experience {
   display: grid;
-  grid-template-columns: 1fr 0.2fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 #section-two > .experience > .job-container {
   display: flex;
@@ -189,22 +190,9 @@ body > main {
   padding: 0.1rem;
   margin-top: 1rem;
 }
-#section-two > .experience > .vertLine {
-  height: inherit;
-  width: 2px;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 0 2rem 0;
-  position: relative;
-}
-#section-two > .experience > .vertLine > .blackdot {
-  width: 8px;
-  height: 8px;
-  background-color: black;
-  border-radius: 100%;
-  outline: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 50px;
-}
 #section-two > .experience > .experience-container {
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+  padding-left: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -224,6 +212,7 @@ body > main {
   font-size: 1rem;
   font-weight: 600;
   text-align: left;
+  margin-bottom: 0.8rem;
 }
 #section-two > .experience > .experience-container .inner-container > p {
   color: rgba(0, 0, 0, 0.5);
@@ -241,6 +230,29 @@ body > main {
   font-size: 0.9rem;
 }
 
+@media screen and (max-width: 1024px) {
+  #section-two {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin-top: -8rem;
+  }
+  #section-two > .title {
+    width: 100%;
+  }
+  #section-two > .title > h1 {
+    text-align: center;
+    transform: rotate(0deg);
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  #section-two > .experience {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+}
 #section-three {
   width: 100%;
   padding: 2rem;
@@ -301,6 +313,24 @@ body > main {
   text-transform: capitalize;
 }
 
+@media screen and (max-width: 1024px) {
+  #section-three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #section-three > .title {
+    width: 100%;
+  }
+  #section-three > .title > h1 {
+    text-align: center;
+    transform: rotate(0deg);
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  #section-three {
+    grid-template-columns: 1fr;
+  }
+}
 #section-four {
   display: flex;
   align-items: center;
