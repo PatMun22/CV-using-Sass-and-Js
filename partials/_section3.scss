@@ -62,16 +62,6 @@
     #section-three {
         grid-template-columns: repeat(2, 1fr);
 
-        & > .title {
-            width: 100%;
-    
-            & > h1{
-                text-align: center;
-                transform: rotate(0deg);
-                margin-bottom: 1rem;
-            }
-        }
-
         & > .sec3-inner:nth-of-type(3) {
             @include no-left-border();
         }
@@ -87,6 +77,24 @@
         & > .sec3-inner:nth-of-type(2),
             .sec3-inner:nth-of-type(4) {
                 @include no-left-border();
+        }
+
+        & > .first-sec {
+
+            & > p {
+                text-align: justify;
+            }
+        }
+
+        & > .third-sec {
+
+            & > ul {
+
+                & > li {
+                    text-align: left;
+                    margin-left: 5rem;
+                }
+            }
         }
     }
 }
