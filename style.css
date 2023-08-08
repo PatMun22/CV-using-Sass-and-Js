@@ -41,6 +41,12 @@ body > main {
     width: 95%;
   }
 }
+@media screen and (max-width: 450px) {
+  body main {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 
 #section-one {
   display: grid;
@@ -127,23 +133,57 @@ body > main {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media screen and (max-width: 946px) {
+  #section-one > .contact > .contactdetails > p {
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 700px) {
   #section-one {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "profilePicture profileName" "contact contact";
   }
   #section-one > .profPic {
-    grid-area: "profilePicture";
+    grid-area: profilePicture;
   }
   #section-one > .profName {
-    grid-area: "profileName";
+    grid-area: profileName;
   }
   #section-one > .contact {
-    grid-area: "contact";
+    grid-area: contact;
+    grid-template-columns: 15% 60%;
+    padding-left: 20%;
   }
   #section-one > .contact > .contactIcons, #section-one > .contact .contactdetails {
-    padding-top: 2rem;
+    padding-top: 0;
+  }
+  #section-one > .contact > .contactdetails > p {
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  #section-one {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "profilePicture" "profileName" "contact";
+  }
+  #section-one > .profPic > img {
+    width: 50%;
+  }
+  #section-one > .profName {
+    display: flex;
+    align-items: center;
+    padding-left: 0rem;
+    padding-top: 0rem;
+  }
+  #section-one > .profName > p {
+    font-size: 18px;
+    margin-top: 0.5rem;
+  }
+  #section-one > .contact {
+    grid-template-columns: 20% 73%;
+    padding-left: 7%;
   }
 }
 #section-two {
