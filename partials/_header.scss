@@ -1,0 +1,108 @@
+
+header {
+    width: 100%;
+    height: 70px;
+
+    & > .nav-container {
+        max-width: inherit;
+        width: 80%;
+        height: inherit;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1.5px solid $text-color;
+
+        & > h1 {
+            border: 1px solid $text-color;
+            border-radius: 100%;
+            font-size: 1.2rem;
+            padding: 15px 5px;
+            font-weight: bold;
+        }
+
+        & > .nav-menu {
+            visibility: hidden;
+        }
+
+        & > i {
+            font-size: 2rem;
+            border: 1px solid $text-color;
+            border-radius: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+    
+        & > .nav-container {
+    
+            & > .nav-menu {
+                visibility: visible;
+                position: fixed;
+                bottom: 2rem;
+                width: 70%;
+                height: 60px;
+                display: block;
+                margin: 0 auto;
+                background-color: $body-color2;
+                border-radius: 30px;
+                box-shadow: 0 4px 24px rgba(20, 25, 21, .6);
+
+                & > .nav-list {
+                    width: 100%;
+                    height: inherit;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding-left: 3rem;
+
+                    & > .nav-item {
+                        list-style: none;
+
+                        & > #nav-link {
+                            position: relative;
+                            color: $main-color;
+
+                            & > i {
+                                color: $main-color;
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        & > #nav-link::after {
+                            content: '';
+                            position: absolute;
+                            width: 28px;
+                            height: 1.3px;
+                            background-color: $body-color1;
+                            left: -1px;
+                            bottom: -8px;
+                            opacity: 0;
+                            transition: .5s ease-in-out;
+                        }
+
+                        & > #nav-link:hover::after {
+                            opacity: 1;
+                            transform: translateY(-6px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+    
+        & > .nav-container {
+    
+            & > .nav-menu {
+                bottom: 4rem;
+                width: 90%;
+            }
+        }
+    }
+}
