@@ -86,7 +86,7 @@ body {
         & > .scrollup {
             position: fixed;
             bottom: -50%;
-            right: 6.2rem;
+            right: 6.5rem;
             padding: .5rem .8rem;
             box-shadow: 0 0 2px $text-color;
             border-radius: 5px;
@@ -120,10 +120,23 @@ body {
     background: rgba(black, 0.6);
 }
 
-body.dark-theme {
+.dark-theme {
 
     & > main {
         background: rgba(0,0,0,0.5);
+
+        & > .change-theme  {
+            color: $dark-theme-text;
+            border: 1px dotted $dark-theme-text;
+        }
+
+        & > .scrollup {
+            box-shadow: 0 0 5px $dark-theme-text;
+
+            & > i{
+                color: $dark-theme-text;
+            }
+        }
 
         & > #section-one {
         

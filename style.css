@@ -67,7 +67,7 @@ body > main > .fa-solid:hover {
 body > main > .scrollup {
   position: fixed;
   bottom: -50%;
-  right: 6.2rem;
+  right: 6.5rem;
   padding: 0.5rem 0.8rem;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -97,63 +97,73 @@ body > main > .show-scroll {
   background: rgba(0, 0, 0, 0.6);
 }
 
-body.dark-theme > main {
+.dark-theme > main {
   background: rgba(0, 0, 0, 0.5);
 }
-body.dark-theme > main > #section-one > .profName {
+.dark-theme > main > .change-theme {
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px dotted rgba(255, 255, 255, 0.7);
+}
+.dark-theme > main > .scrollup {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+.dark-theme > main > .scrollup > i {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-one > .profName > h1, body.dark-theme > main > #section-one > .profName p {
+.dark-theme > main > #section-one > .profName {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-one > .contact > .contactIcons > i {
+.dark-theme > main > #section-one > .profName > h1, .dark-theme > main > #section-one > .profName p {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-one > .contact > .contactdetails > p, body.dark-theme > main > #section-one > .contact > .contactdetails a {
+.dark-theme > main > #section-one > .contact > .contactIcons > i {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-two > .title > h1 {
+.dark-theme > main > #section-one > .contact > .contactdetails > p, .dark-theme > main > #section-one > .contact > .contactdetails a {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-two > .experience > .experience-container > .job-details > h2, body.dark-theme > main > #section-two > .experience > .experience-container > .job-details p {
+.dark-theme > main > #section-two > .title > h1 {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-two > .experience > .experience-container > .inner-container > h2, body.dark-theme > main > #section-two > .experience > .experience-container > .inner-container p {
+.dark-theme > main > #section-two > .experience > .experience-container > .job-details > h2, .dark-theme > main > #section-two > .experience > .experience-container > .job-details p {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-two > .experience > .experience-container > .inner-container > ul > li {
+.dark-theme > main > #section-two > .experience > .experience-container > .inner-container > h2, .dark-theme > main > #section-two > .experience > .experience-container > .inner-container p {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-three {
+.dark-theme > main > #section-two > .experience > .experience-container > .inner-container > ul > li {
+  color: rgba(255, 255, 255, 0.7);
+}
+.dark-theme > main > #section-three {
   background: rgba(0, 0, 0, 0.5);
 }
-body.dark-theme > main > #section-three > .sec3-inner > .sec3-inner > h2::before {
+.dark-theme > main > #section-three > .sec3-inner > .sec3-inner > h2::before {
   background-color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-three > .sec3-inner > h2, body.dark-theme > main > #section-three > .sec3-inner p {
+.dark-theme > main > #section-three > .sec3-inner > h2, .dark-theme > main > #section-three > .sec3-inner p {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-three > .sec3-inner > .mini-div > h3, body.dark-theme > main > #section-three > .sec3-inner > .mini-div p {
+.dark-theme > main > #section-three > .sec3-inner > .mini-div > h3, .dark-theme > main > #section-three > .sec3-inner > .mini-div p {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main > #section-three > .sec3-inner > .mini-div > .mini-div-inner > span {
+.dark-theme > main > #section-three > .sec3-inner > .mini-div > .mini-div-inner > span {
   color: rgb(255, 255, 255);
 }
-body.dark-theme > main > #section-three > .sec3-inner > ul > li {
+.dark-theme > main > #section-three > .sec3-inner > ul > li {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main #section-four > h3 {
+.dark-theme > main #section-four > h3 {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main #section-four > hr {
+.dark-theme > main #section-four > hr {
   background-color: rgb(255, 255, 255);
 }
-body.dark-theme > main #section-four > p {
+.dark-theme > main #section-four > p {
   color: rgba(255, 255, 255, 0.7);
 }
-body.dark-theme > main #section-four > p:nth-of-type(2),
-body.dark-theme > main #section-four p:nth-of-type(3),
-body.dark-theme > main #section-four p:nth-of-type(4) {
+.dark-theme > main #section-four > p:nth-of-type(2),
+.dark-theme > main #section-four p:nth-of-type(3),
+.dark-theme > main #section-four p:nth-of-type(4) {
   border-left: 1px solid rgb(255, 255, 255);
 }
 
@@ -487,11 +497,6 @@ body.dark-theme > main #section-four p:nth-of-type(4) {
   text-transform: uppercase;
 }
 #section-three > .sec3-inner > h2::before {
-  content: "";
-  position: absolute;
-  bottom: 1px;
-  height: 2px;
-  width: 20%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 #section-three > .sec3-inner:nth-of-type(2),

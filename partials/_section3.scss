@@ -16,11 +16,6 @@
     }
 
     & > .sec3-inner > h2::before {
-        content: '';
-        position: absolute;
-        bottom: 1px;
-        height: 2px;
-        width: 20%;
         background-color: $text-color;
     }
 
