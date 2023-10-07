@@ -1,12 +1,13 @@
 /*---------------show scrollUp button----------*/
 
 const scrollUp = () => {
-    const scrollUp = document.getElementById('scroll-up');
-    this.scrollY >=  50 ? scrollUp.classList.add('show-scroll')
-                    : scrollUp.classList.remove('show-scroll');
-}
+  const scrollUp = document.getElementById("scroll-up");
+  this.scrollY >= 50
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
 
-window.addEventListener('scroll', scrollUp);
+window.addEventListener("scroll", scrollUp);
 
 /* ---------------------theme change --------------*/
 /*
@@ -44,16 +45,33 @@ themeButton.addEventListener('click', () => {
 
 */
 
-let icon = document.getElementById('theme-button');
+/*let icon = document.getElementById('theme-button');
+let body = document.querySelector('body');
 
 icon.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
+    body.classList.toggle('dark-theme');
 
     if(body.classList.contains('dark-theme')) {
         icon.classList.contains('fa-solid fa-moon');
-        icon.classList.contains('fa-sharp fa-solid fa-sun-bright');
+        icon.classList.contains('');
     } else {
         icon.classList.contains('fa-sharp fa-solid fa-sun-bright');
         icon.classList.contains('fa-solid fa-moon');
     }
-})
+})*/
+
+let icon = document.getElementById("theme-button");
+let main = document.querySelector("main");
+
+icon.addEventListener("click", () => {
+  this.classList.toggle("fa-sharp fa-solid fa-sun-bright");
+  if (this.classList.toggle("fa-solid fa-moon")) {
+    main.style.background = "black";
+    main.style.color = "white";
+    main.style.transition = ".5s";
+  } else {
+    main.style.background = "white";
+    main.style.color = "black";
+    main.style.transition = ".5s";
+  }
+});

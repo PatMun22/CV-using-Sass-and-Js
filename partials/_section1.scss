@@ -1,4 +1,3 @@
-
 #section-one {
     display: grid;
     grid-template-columns: .8fr 1.5fr 1fr;
@@ -8,7 +7,7 @@
     margin: 0;
     border-bottom: 1px solid $body-color2;
 
-    & > .profPic {
+    &>.profPic {
         background-color: $sub-sectionbg-color;
         width: 100%;
         height: 100%;
@@ -17,27 +16,27 @@
         justify-content: center;
         overflow: hidden;
 
-        & > img{
+        &>img {
             width: 100%;
             height: auto;
             border-radius: 100%;
             transition: 0.3s ease-in-out;
         }
 
-        & > img:hover {
+        &>img:hover {
             transform: scale(1.1);
         }
     }
 
-    & > .profName {
+    &>.profName {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
         padding-left: 1.5rem;
         padding-top: 5rem;
 
-        & > h1 {
+        &>h1 {
             font-weight: 600;
             color: $text-color;
             letter-spacing: 0.3rem;
@@ -45,32 +44,32 @@
             font-size: 20px;
         }
 
-        & > p {
+        &>p {
             font-size: 16px;
             color: $sub-sectionbg-color;
             margin-top: 1rem;
         }
     }
 
-    & > .contact {
+    &>.contact {
         display: grid;
         grid-template-columns: 15% 85%;
 
-        & > .contactIcons {
+        &>.contactIcons {
             background-color: $text-color;
             @include section1_lastSub();
 
-            & > i {
+            &>i {
                 color: $main-color;
                 display: block;
                 margin: 0 auto;
             }
         }
 
-        & > .contactdetails {
+        &>.contactdetails {
             @include section1_lastSub();
 
-            & > p{
+            &>p {
                 line-height: 1rem;
                 margin-left: 1rem;
                 cursor: pointer;
@@ -89,11 +88,11 @@
 @media screen and (max-width: 946px) {
     #section-one {
 
-        & > .contact {
-    
-            & > .contactdetails {
-    
-                & > p{
+        &>.contact {
+
+            &>.contactdetails {
+
+                &>p {
                     margin-left: 0;
                 }
             }
@@ -105,31 +104,32 @@
     #section-one {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "profilePicture profileName"
             "contact contact";
 
-        & > .profPic {
+        &>.profPic {
             grid-area: profilePicture;
         }
 
-        & > .profName {
+        &>.profName {
             grid-area: profileName;
         }
 
-        & > .contact {
+        &>.contact {
             grid-area: contact;
             grid-template-columns: 15% 60%;
             padding-left: 20%;
 
 
-            & > .contactIcons, .contactdetails {
+            &>.contactIcons,
+            .contactdetails {
                 padding-top: 0;
             }
 
-            & > .contactdetails {
-    
-                & > p{
+            &>.contactdetails {
+
+                &>p {
                     margin-left: 2rem;
                 }
             }
@@ -141,31 +141,31 @@
     #section-one {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "profilePicture"
             "profileName"
             "contact";
 
-        & > .profPic {
-        
-            & > img{
+        &>.profPic {
+
+            &>img {
                 width: 50%;
             }
         }
 
-        & > .profName {
+        &>.profName {
             display: flex;
             align-items: center;
             padding-left: 0rem;
             padding-top: 0rem;
-    
-            & > p {
+
+            &>p {
                 font-size: 18px;
                 margin-top: .5rem;
             }
         }
 
-        & > .contact {
+        &>.contact {
             grid-template-columns: 20% 73%;
             padding-left: 7%;
         }

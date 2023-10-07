@@ -42,7 +42,7 @@ body {
                     "section2"
                     "section3"
                     "section4";
-        box-shadow: 3rem 3rem 1.5rem $sub-sectionbg-color;
+        box-shadow: 0 0 3rem $sub-sectionbg-color;
         margin: 2rem 0 3rem;
         overflow: hidden;
         position: relative;
@@ -133,7 +133,7 @@ body {
         & > .scrollup {
             box-shadow: 0 0 5px $dark-theme-text;
 
-            & > i{
+            & > i {
                 color: $dark-theme-text;
             }
         }
